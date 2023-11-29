@@ -1,22 +1,50 @@
-let director1 = { Name = "Sian Heder"; Movies = 9 }
-let director2 = { Name = "Kenneth Branagh"; Movies = 23 }
-let director3 = { Name = "Adam McKay"; Movies = 27 }
-let director4 = { Name = "Ryusuke Hamaguchi"; Movies = 16 }
-let director5 = { Name = "Denis Villeneuve"; Movies = 24 }
-let director6 = { Name = "Reinaldo Marcus Green"; Movies = 15 }
-let director7 = { Name = "Paul Thomas Anderson"; Movies = 49 }
-let director8 = { Name = "Guillermo Del Toro"; Movies = 22 }
+type Genre =
+    | Horror
+    | Drama
+    | Thriller
+    | Comedy
+    | Fantasy
+    | Sport
 
-let movie1 = { Name = "CODA"; RunLength = 111; Genre = Drama; Director = director1; IMDBRating = 8.1 }
-let movie2 = { Name = "Belfast"; RunLength = 98; Genre = Comedy; Director = director2; IMDBRating = 7.3 }
-let movie3 = { Name = "Don't Look Up"; RunLength = 138; Genre = Comedy; Director = director3; IMDBRating = 7.2 }
-let movie4 = { Name = "Drive My Car"; RunLength = 179; Genre = Drama; Director = director4; IMDBRating = 7.6 }
-let movie3 = { Name = "Dune"; RunLength = 155; Genre = Comedy; Director = director3; IMDBRating = 7.2 }
-let movie3 = { Name = "King Richard"; RunLength = 144; Genre = Comedy; Director = director3; IMDBRating = 7.2 }
-let movie3 = { Name = "Licorice Pizza"; RunLength = 133; Genre = Comedy; Director = director3; IMDBRating = 7.2 }
-let movie3 = { Name = "Nightmare Alley"; RunLength = 150; Genre = Comedy; Director = director3; IMDBRating = 7.2 }
+type Director = {
+    Name: string
+    Movies: int
+}
 
-// Display movie instances
-printfn "Movie 1: %s, %d minutes, Genre: %A, Director: %s, Rating: %f" movie1.Name movie1.RunLength movie1.Genre movie1.Director.Name movie1.IMDBRating
-printfn "Movie 2: %s, %d minutes, Genre: %A, Director: %s, Rating: %f" movie2.Name movie2.RunLength movie2.Genre movie2.Director.Name movie2.IMDBRating
-printfn "Movie 3: %s, %d minutes, Genre: %A, Director: %s, Rating: %f" movie3.Name movie3.RunLength movie3.Genre movie3.Director.Name movie3.IMDBRating
+type Movie = {
+    Name: string
+    RunLength: int
+    Genre: Genre
+    Director: Director
+    IMDBRating: float
+}
+
+let dir1 = { Name = "Sian Heder"; Movies = 9 }
+let dir2 = { Name = "Kenneth Branagh"; Movies = 23 }
+let dir3 = { Name = "Adam McKay"; Movies = 27 }
+let dir4 = { Name = "Ryusuke Hamaguchi"; Movies = 16 }
+let dir5 = { Name = "Denis Villeneuve"; Movies = 24 }
+let dir6 = { Name = "Reinaldo Marcus Green"; Movies = 15 }
+let dir7 = { Name = "Paul Thomas Anderson"; Movies = 49 }
+let dir8 = { Name = "Guillermo Del Toro"; Movies = 22 }
+
+let coda = { Name = "CODA"; RunLength = 111; Genre = Drama; Director = dir1; IMDBRating = 8.1 }
+let belfast = { Name = "Belfast"; RunLength = 98; Genre = Comedy; Director = dir2; IMDBRating = 7.3 }
+let dontLookUp = { Name = "Don't Look Up"; RunLength = 138; Genre = Comedy; Director = dir3; IMDBRating = 7.2 }
+let driveMyCar = { Name = "Drive My Car"; RunLength = 179; Genre = Drama; Director = dir4; IMDBRating = 7.6 }
+let dune = { Name = "Dune"; RunLength = 155; Genre = Fantasy; Director = dir5; IMDBRating = 8.1 }
+let kingRichard = { Name = "King Richard"; RunLength = 144; Genre = Sport; Director = dir6; IMDBRating = 7.5 }
+let licoricePizza = { Name = "Licorice Pizza"; RunLength = 133; Genre = Comedy; Director = dir7; IMDBRating = 7.4 }
+let nightmareAlley = { Name = "Nightmare Alley"; RunLength = 150; Genre = Thriller; Director = dir8; IMDBRating = 7.1 }
+
+let movies = [coda; belfast; dontLookUp; driveMyCar; dune; kingRichard; licoricePizza; nightmareAlley]
+printfn "Total movies: %A" (List.map (fun movie -> movie.Name) movies)
+let oscarwin = List.filter (fun movie -> movie.IMDBRating > 7.4) movies
+printfn "Oscar Winners: %A" (List.map (fun movie -> movie.Name) oscarwin)
+let cal runLength =
+    let hours = runLength / 60
+    let minutes = runLength % 60
+    sprintf "%dh %dmin" hours minutes
+
+let calRunLengths = List.map (fun movie -> cal movie.RunLength) movies
+printfn "Converted Run Lengths: %A" calRunLengths

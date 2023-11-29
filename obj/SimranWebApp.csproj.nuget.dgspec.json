@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\simra\\SimranWebApp\\SimranWebApp.csproj": {}
+    "C:\\Users\\simra\\OneDrive\\Desktop\\TEST2\\SimranWebApp\\SimranWebApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\simra\\SimranWebApp\\SimranWebApp.csproj": {
+    "C:\\Users\\simra\\OneDrive\\Desktop\\TEST2\\SimranWebApp\\SimranWebApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\simra\\SimranWebApp\\SimranWebApp.csproj",
+        "projectUniqueName": "C:\\Users\\simra\\OneDrive\\Desktop\\TEST2\\SimranWebApp\\SimranWebApp.csproj",
         "projectName": "SimranWebApp",
-        "projectPath": "C:\\Users\\simra\\SimranWebApp\\SimranWebApp.csproj",
+        "projectPath": "C:\\Users\\simra\\OneDrive\\Desktop\\TEST2\\SimranWebApp\\SimranWebApp.csproj",
         "packagesPath": "C:\\Users\\simra\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\simra\\SimranWebApp\\obj\\",
+        "outputPath": "C:\\Users\\simra\\OneDrive\\Desktop\\TEST2\\SimranWebApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\simra\\AppData\\Roaming\\NuGet\\NuGet.Config"

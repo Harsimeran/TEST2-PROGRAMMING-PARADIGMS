@@ -1,0 +1,7 @@
+C:\Users\simra\OneDrive\Desktop\TEST2\SimranWebApp\obj\Debug\net7.0\SimranWebApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\simra\OneDrive\Desktop\TEST2\SimranWebApp\obj\Debug\net7.0\SimranWebApp.AssemblyInfoInputs.cache
+C:\Users\simra\OneDrive\Desktop\TEST2\SimranWebApp\obj\Debug\net7.0\SimranWebApp.AssemblyInfo.cs
+C:\Users\simra\OneDrive\Desktop\TEST2\SimranWebApp\obj\Debug\net7.0\SimranWebApp.csproj.CoreCompileInputs.cache
+C:\Users\simra\OneDrive\Desktop\TEST2\SimranWebApp\obj\Debug\net7.0\SimranWebApp.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\simra\OneDrive\Desktop\TEST2\SimranWebApp\obj\Debug\net7.0\SimranWebApp.RazorAssemblyInfo.cache
+C:\Users\simra\OneDrive\Desktop\TEST2\SimranWebApp\obj\Debug\net7.0\SimranWebApp.RazorAssemblyInfo.cs
